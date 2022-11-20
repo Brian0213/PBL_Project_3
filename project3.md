@@ -18,7 +18,7 @@
 
 ![Ubuntu Upgrade](./image/ubuntu-upgrade-output.PNG)
 
-Lets get the location of Node.js software from Ubuntu repositories.
+- Lets get the location of Node.js software from Ubuntu repositories:
 
 `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -`
 
@@ -35,13 +35,13 @@ Install Node.js with the command below:
 
 - Verify the node installation with the command below:
 
-`node -v `
+`node -v`
 
 ![Node Version Info](./image/node-version.PNG)
 
 - Verify the node installation with the command below:
 
-`npm -v `
+`npm -v`
 
 ![Npm Version Info](./image/npm-version.PNG)
 
@@ -64,7 +64,7 @@ Now change your current directory to the newly created one:
 
 ![Directory Change to Todo](./image/change-directory-todo.PNG)
 
-- Next, you will use the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
+- Next, you will run the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
 
 `npm init`
 
@@ -78,9 +78,7 @@ Now change your current directory to the newly created one:
 
 ![Package Json Output](./image/package-json-status.PNG)
 
-
-
-2. **Install ExpressJS**
+2.**Install ExpressJS**
 
 - Remember that Express is a framework for Node.js, therefore a lot of things developers would have programmed is already taken care of out of the box. Therefore it simplifies development, and abstracts a lot of low level details. For example, Express helps to define routes of your application based on HTTP methods and URLs.
 
@@ -152,20 +150,19 @@ Each task will be associated with some particular endpoint and will use differen
 
 ![Routes Create Directory](./image/change-to-routes-directory.PNG)
 
-Now, create a file api.js with the command below:
+- Now, create a file api.js with the command below:
 
 `touch api.js`
 
 ![Apijs Output](./image/apijs-output.PNG)
 
-Open the file with the command below:
+- Open the file with the command below:
 
 `vim api.js`
 
 ![Vim Code Copy](./image/vim-code-copy.PNG)
 
-
-3. **Models**
+3.**Models**
 
 - Now comes the interesting part, since the app is going to make use of Mongodb which is a NoSQL database, we need to create a model.
 
@@ -261,7 +258,7 @@ Now, paste the entire code below in the file
 
 - Now open your Postman, create a POST request to the API http://<PublicIP-or-PublicDNS>:5000/api/todos. This request sends a new task to our To-Do list so the application could store it in the database.
 
-- Note: make sure your set header key Content-Type as application/json
+- Note: make sure your set header key Content-Type as application/json:
 
 [Postman Post URL](http://3.144.164.56:5000/api/todos)
 
@@ -273,13 +270,13 @@ Now, paste the entire code below in the file
 
 ![Postman Get Output](./image/postman-get-output.PNG)
 
-- Delete an existing task from the list – HTTP DELETE request
+- Delete an existing task from the list – HTTP DELETE request:
 
 [Postman Delete URL](http://3.144.164.56:5000/api/todos/636d668d01aaa62e45d0ae3a)
 
 ![Postman Delete Output](./image/post-delete-output.PNG)
 
-5. **Frontend creation**
+5.**Frontend creation**
 
 - Since we are done with the functionality we want from our backend and API, it is time to create a user interface for a Web client (browser) to interact with the application via API. To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app.
 
@@ -368,9 +365,9 @@ From your Todo directory run:
 
 `vi Input.js`
 
-To make use of Axios, which is a Promise based HTTP client for the browser and node.js, you need to cd into your client from your terminal and run yarn add axios or npm install axios.
+- To make use of Axios, which is a Promise based HTTP client for the browser and node.js, you need to cd into your client from your terminal and run yarn add axios or npm install axios.
 
-Move to the src folder:
+- Move to the src folder:
 
 `cd ..`
 
@@ -388,8 +385,7 @@ Move to the src folder:
 
 ![Npm Install Axios](./image/axios-install-output.PNG)
 
-
-6. **Frontend creation (continued)**
+6.**Frontend creation (continued)**
 
 - Go to ‘components’ directory:
 
@@ -452,9 +448,3 @@ Move to the src folder:
 [title](http://18.116.235.188:3000/)
 
 ![Npm Run Dev Step 6](./image/mytodo-output-success-output.PNG)
-
-
-
-
-
-
